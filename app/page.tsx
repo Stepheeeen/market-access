@@ -3,8 +3,17 @@ import Link from "next/link";
 import { Footer } from "./Component/Footer";
 import { Team } from "./Component/Team";
 import { NavBar } from "./Component/NavBar";
+import { Blog } from "./Component/Blog";
 
 export default function Home() {
+
+  const blogContainer = [
+    { image: "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/64a40bc2f0df3bde45d93271_IMG-20230704-WA0007-p-500.jpg", topic: "Commentary", title: "Making Markets for Health Care Work: A Conversation with Market Access Africa Managing Partner", text: "In this interview, Market Access Africa Managing Partner Olawale Ajose discusses the role of private markets in enhancing access to healthcare for Africa. ", subimage: "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f0a34f18243edb04f9d_Olawale%20Ajose.png", name: "Olawale Ajose", date: "July 4, 2024" },
+    { image: "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/646e5fdf6ad5c1fa6178c96a_Screenshot%202023-04-20%20at%202.22.28%20PM-p-500.png", topic: "PDF", title: "Child Survival Action: A Blueprint for Advocacy and Action", text: "The Blueprint for Advocacy and Action on Child Survival guides a network coalition of national, regional, and global level actors, around a coordinated campaign with a common brand identity and a unified purpose to child survival", subimage: "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f1b91d0a2b7bf4efd48_Kudzai%20Makomva.png", name: "Kudzai Makomva", date: "May 24, 2023" },
+    { image: "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/64494f52f401ee56b0f11ba1_MAA%20malaria%20day%20-p-500.jpg", topic: "Commentary", title: "Will Global Supply of New Malaria Vaccines meet the African Demand?", text: "Investing in innovation for better tools as well as for rapidly scaling up supply is critical, and it has to be fuelled by the same sense of urgency with which the world developed, produced, and deployed a COVID-19 vaccine", subimage: "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f1b91d0a2b7bf4efd48_Kudzai%20Makomva.png", name: "Kudzai Makomva", date: "April 26, 2023" },
+
+  ]
+
   return (
     <main className="grid w-[100%] m-0 p-0 box-border">
       <NavBar />
@@ -281,11 +290,25 @@ export default function Home() {
       </section>
 
       <Team />
-      <section>
-        <div>Featured Insights</div>
+      <section className="mt-[50px] mb-9">
+        <div className="text-[#003634] text-[2em] font-[700] leading-[120%] text-center font-nunito">Featured Insights</div>
+
+        <div className="flex justify-between items-center p-[50px]">
+          {
+            blogContainer.map((blog, i) => (
+              <Blog text={blog.text} title={blog.title} image={blog.image} name={blog.name} date={blog.date} subimage={blog.subimage} topic={blog.topic} key={i} />
+            ))
+          }
+        </div>
+
+
+        <button className="font-semibold block m-auto  text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out bg-[#f2b630] py-3 px-8 rounded-xl mt-4">
+          Read More
+        </button>
+
       </section>
 
-      <section className="mt-4 grid place-content-center w-70%">
+      <section className="mt-7 grid place-content-center w-70%">
         <div className="bg-[url('https://global-uploads.webflow.com/628cd1f0013870d234838177/62bc197783fd9c58e0ea34fc_banner-bg-dark-green.svg')] w-[1200px] font-nunito font-normal text-[#fff] text-[1.4em] flex justify-between items-center rounded-lg py-20 px-12">
           <div>
             <h1 className="text-[1.6em] font-semibold">
