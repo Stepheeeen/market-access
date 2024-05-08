@@ -16,7 +16,7 @@ export const Team = () => {
                 African healthcare.
             </p>
 
-            <div className="flex w-[100%] items-center justify-between">
+            <div className="flex w-[100%] max-[600px]:flex-col items-center justify-between">
                 <div>
                     <Image
                         src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f0a34f18243edb04f9d_Olawale%20Ajose.png"

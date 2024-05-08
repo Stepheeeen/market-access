@@ -16,11 +16,11 @@ export default function Home() {
 
   return (
     <main className="grid w-[100%] m-0 p-0 box-border">
-      <NavBar />
+      {/* <NavBar /> */}
 
       <section className="bg-[#003634] w-100% grid place-items-center px-10 h-[1330px]">
-        <section className="w-100% p-[105px] flex justify-around items-center px-[65px]">
-          <div className="w-[700px]">
+        <section className="w-100% flex max-[600px]:flex-col-reverse justify-around items-center px-[65px]">
+          <div className="md:w-[700px] max-[600px]:pt-10">
             <h1 className="text-[2.9em] font-[600] font-nunito text-white">
               Reimagining African healthcare
             </h1>
@@ -64,7 +64,7 @@ export default function Home() {
             height={700}
           />
         </section>
-        <section className="flex justify-center items-center bg-white p-7 mt-10">
+        <section className="flex justify-center max-[600px]:flex-col items-center bg-white p-7 mt-10">
           <div className="p-6">
             <p className="text-[2em] mb-[3rem] font-bold font-nunito text-[#003634] mt-[-100px]">
               Areas Of Expertise
@@ -172,7 +172,7 @@ export default function Home() {
           Our Case Studies
         </h1>
 
-        <div className="flex items-center justify-center w-[80%]">
+        <div className="flex items-center max-[600px]:flex-col justify-center w-[80%]">
           <div className="p-[20px] rounded-xl bg-[#a3d9d7] min-w-[50%] hover:bg-[#47b3ae] pointer ease-in-out duration-500 mr-5 ">
             <Image
               src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62e8dc318aa3c2502a9a6565_Case%20Study%2014-p-800.jpg"
@@ -258,7 +258,7 @@ export default function Home() {
         </button>
       </section>
 
-      <section className="grid place-items-center w-[100%] mt-[100px]">
+      <section className="grid place-items-center  w-[100%] mt-[100px]">
         <h1 className="mb-[40px] text-[32px] font-nunito font-bold text-[#003634]">
           Our Partners
         </h1>
@@ -293,7 +293,7 @@ export default function Home() {
       <section className="mt-[50px] mb-9">
         <div className="text-[#003634] text-[2em] font-[700] leading-[120%] text-center font-nunito">Featured Insights</div>
 
-        <div className="flex justify-between items-center p-[50px]">
+        <div className="flex justify-between max-[600px]:flex-col items-center p-[50px]">
           {
             blogContainer.map((blog, i) => (
               <Blog text={blog.text} title={blog.title} image={blog.image} name={blog.name} date={blog.date} subimage={blog.subimage} topic={blog.topic} key={i} />
