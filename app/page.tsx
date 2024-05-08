@@ -62,9 +62,10 @@ export default function Home() {
             alt="Description of the image"
             width={570}
             height={700}
+            className="w-[90vw] h-[90%] mx-auto"
           />
         </section>
-        <section className="flex justify-center items-center bg-white p-7 mt-10">
+        <section className="flex justify-center max-[600px]:flex-col h- items-center bg-white p-7 mt-10">
           <div className="p-6">
             <p className="text-[2em] mb-[3rem] font-bold font-nunito text-[#003634] mt-[-100px]">
               Areas Of Expertise
@@ -167,7 +168,7 @@ export default function Home() {
         <hr className="border-[#00a99d] w-[87%] border mb-[50px] block mx-auto mt-[60px]" />
       </section>
       <div className="h-[200px] w-[100%]"></div>
-      <section className="grid place-items-center w-[100%] mt-[100px]">
+      <section className="grid place-items-center w-[100%] h-[100%] mt-[40px]">
         <h1 className="mb-[40px] text-[32px] font-nunito font-bold text-[#003634]">
           Our Case Studies
         </h1>
@@ -293,7 +294,7 @@ export default function Home() {
       <section className="mt-[50px] mb-9">
         <div className="text-[#003634] text-[2em] font-[700] leading-[120%] text-center font-nunito">Featured Insights</div>
 
-        <div className="flex justify-between items-center p-[50px]">
+        <div className="flex max-[600px]:flex-col justify-between items-center p-[50px]">
           {
             blogContainer.map((blog, i) => (
               <Blog text={blog.text} title={blog.title} image={blog.image} name={blog.name} date={blog.date} subimage={blog.subimage} topic={blog.topic} key={i} />
