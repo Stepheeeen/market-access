@@ -1,50 +1,51 @@
 import React from 'react'
+import Link from 'next/link'
 
 export const Footer = () => {
     return (
-        <footer className="w-100% p-8 bg-[#003634] mt-14 text-white">
+        <footer className="w-[100%] p-[5em] mx-auto bg-[#003634] mt-14 text-white">
             <div className="flex justify-between items-center">
-                <div>
-                    <ul>
-                        <h4>READ MORE</h4>
-                        <li>About Us</li>
-                        <li>Services</li>
-                        <li>Insights</li>
-                    </ul>
+                <div className='flex '>
+                    <div className='flex flex-col items-start mr-[5em]'>
+                        <div className='text-[#a3d9d7] text-[.875em] font-nunito mb-[1em] font-[700]'>READ MORE</div>
+                        <Link href="/" className='text-[.875em] mb-[1em] text-white font-nunito'>About Us</Link>
+                        <Link href="/" className='text-[.875em] mb-[1em] text-white font-nunito'>Services</Link>
+                        <Link href="/" className='text-[.875em] mb-[1em] text-white font-nunito'>Insights</Link>
+                    </div>
 
-                    <ul>
-                        <h4>CAREERS</h4>
-                        <li>Join Us</li>
-                        <li>Job Listings</li>
-                        <li>Become a Consultant</li>
-                    </ul>
+                    <div className='flex flex-col items-start mr-[5em]'>
+                        <div className='text-[#a3d9d7] text-[.875em] font-nunito mb-[1em] font-[700]'>CAREERS</div>
+                        <Link href="/" className='text-[.875em] mb-[1em] text-white font-nunito'>Join Us</Link>
+                        <Link href="/" className='text-[.875em] mb-[1em] text-white font-nunito'>Job Listings</Link>
+                        <Link href="/" className='text-[.875em] mb-[1em] text-white font-nunito'>Become a Consultant</Link>
+                    </div>
 
-                    <ul>
-                        <h4>LEGAL</h4>
-                        <li>Ts & Cs</li>
-                        <li>Privacy Policy</li>
-                        <li>Cookie Policy</li>
-                    </ul>
+                    <div className='flex flex-col items-start mr-[5em]'>
+                        <div className='text-[#a3d9d7] text-[.875em] font-nunito mb-[1em] font-[700]'>LEGAL</div>
+                        <Link href="/" className='text-[.875em] mb-[1em] text-white font-nunito'>Ts & Cs</Link>
+                        <Link href="/" className='text-[.875em] mb-[1em] text-white font-nunito'>Privacy Policy</Link>
+                        <Link href="/" className='text-[.875em] mb-[1em] text-white font-nunito'>Cookie Policy</Link>
+                    </div>
                 </div>
 
-                <div>
-                    <h3>
+                <div className='max-w-[23.75em]'>
+                    <div className='text-[#a3d9d7] text-[.875em] font-nunito mb-[1em] font-[700]'>
                         CONTACT US
-                    </h3>
+                    </div>
 
-                    <p>
+                    <p className='text-[.875em] mb-[1em] text-white font-nunito'>
                         Reach out to learn more about how we can help you access the African market and deliver practical and enduring results. <br />
                         <br />
-                        Email: <span>hello@marketaccess.africa</span>
+                        Email: <span className='text-[#f2b630] font-[600] underline pointer'>hello@marketaccess.africa</span>
                     </p>
                 </div>
 
             </div>
 
-            <hr />
+            <hr className='mt-[4em]' />
 
-            <div className="flex justify-between">
-                <p>
+            <div className="flex justify-between pt-[1.5em]">
+                <p className='text-[.875em] text-white font-nunito'>
                     ©
                     2024
                     Market Access Africa All rights reserved.

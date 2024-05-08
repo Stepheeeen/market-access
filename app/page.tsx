@@ -309,12 +309,12 @@ export default function Home() {
       </section>
 
       <section className="mt-7 grid place-content-center w-70%">
-        <div className="bg-[url('https://global-uploads.webflow.com/628cd1f0013870d234838177/62bc197783fd9c58e0ea34fc_banner-bg-dark-green.svg')] w-[1200px] font-nunito font-normal text-[#fff] text-[1.4em] flex justify-between items-center rounded-lg py-20 px-12">
+        <div className="bg-[url('https://global-uploads.webflow.com/628cd1f0013870d234838177/62bc197783fd9c58e0ea34fc_banner-bg-dark-green.svg')] w-[1200px] font-nunito font-normal text-[#fff] flex justify-between items-center rounded-lg py-[6.25rem] px-[4em]">
           <div>
-            <h1 className="text-[1.6em] font-semibold">
+            <h1 className="text-[2em] font-[700] leading-[120%]">
               Have A Question?
             </h1>
-            <p>Please fill out our form or email us.</p>
+            <p className="text-[1.125em] font-[400]">Please fill out our form or email us.</p>
           </div>
 
           <button className="font-semibold flex justify-around items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl">
