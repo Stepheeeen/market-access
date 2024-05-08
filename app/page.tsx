@@ -19,7 +19,7 @@ export default function Home() {
       <NavBar />
 
       <section className="bg-[#003634] w-100% grid place-items-center px-10 h-[1330px]">
-        <section className="w-100% p-[105px] flex justify-around items-center px-[65px]">
+        <section className="w-100% p-[105px] flex justify-around max-[600px]:flex-col-reverse max-[600px]:px-[20px] items-center px-[65px]">
           <div className="w-[700px]">
             <h1 className="text-[2.9em] font-[600] font-nunito text-white">
               Reimagining African healthcare
