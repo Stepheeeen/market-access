@@ -82,7 +82,7 @@ export default function Home() {
                   >
                     <path
                       d="M9.02166 0.483154L7.57049 1.89315L13.3134 7.48315H0.788086V9.48315H13.3134L7.57049 15.0732L9.02166 16.4832L17.2552 8.48315L9.02166 0.483154Z"
-                      fill="currentColor"
+                      fill="currentColor "
                     ></path>
                   </svg>
                 </span>
