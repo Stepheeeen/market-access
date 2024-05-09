@@ -46,13 +46,13 @@ export default function Home() {
 
   return (
     <div className="grid w-[100%] place-items-center">
-      <main className="grid w-[100%] max-w-[1440px] m-0 p-0 box-border">
+      <main className="grid w-[100%] xl:w-[1440px] m-0 p-0 box-border">
         <NavBar />
 
-        <section className="bg-[#003634] w-100% grid place-items-center px-10 h-[1330px]">
-          <section className="w-100% p-[105px] flex justify-around items-center px-[65px]">
-            <div className="w-[700px]">
-              <h1 className="text-[2.9em] font-[600] font-nunito text-white">
+        <section className="md:bg-[#003634] w-[100%] grid place-items-center md:px-10 md:h-[1330px]">
+          <section className="w-[100%] py-6 md:p-[105px] flex flex-col-reverse justify-between md:flex-row md:justify-around items-center md:px-[65px] bg-[#003634] md:bg-transparent">
+            <div className="w-[80%] md:w-[700px] md:mt-8">
+              <h1 className="text-[3em] md:text-[2.9em] font-[600] font-nunito text-white">
                 Reimagining African healthcare
               </h1>
 
@@ -93,6 +93,7 @@ export default function Home() {
               alt="Description of the image"
               width={570}
               height={700}
+              className="w-[80%] lg:w-[570px]"
             />
           </section>
           <section className="flex justify-center items-center bg-white p-7 mt-10">
