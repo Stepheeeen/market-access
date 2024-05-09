@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const NavBar = () => {
   return (
-    <nav className="h-[170px] w-100% md:h-[90px] flex p-[10px] justify-between items-center px-[20px]">
+    <nav className="h-[140px] w-[100%] lg:h-[90px] flex p-[10px] justify-between items-center px-12 fixed top-0 left-0 bg-white md:relative">
       {/* Display this image on large screens (above 990px) */}
       <Image
         src="https://global-uploads.webflow.com/628cd1f0013870d234838177/62961eb456ef602bf8751d0c_maa-full-logo.svg"
@@ -20,7 +20,7 @@ export const NavBar = () => {
         alt="Description of the image"
         width={0}
         height={0}
-        className="inline lg:hidden w-[4em]"
+        className="inline lg:hidden w-[6em]"
       />
 
       <div className="hidden md:inline">
@@ -66,6 +66,8 @@ export const NavBar = () => {
           </button>
         </div>
       </div>
+
+      <div className="inline md:hidden">hamburger</div>
     </nav>
   );
 };

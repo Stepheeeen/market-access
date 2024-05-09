@@ -45,12 +45,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="grid w-[100%] place-items-center">
+    <div className="grid w-[100%] place-items-center relative">
       <main className="grid w-[100%] xl:w-[1440px] m-0 p-0 box-border">
         <NavBar />
 
         <section className="md:bg-[#003634] w-[100%] grid place-items-center md:px-10 md:h-[1330px]">
-          <section className="w-[100%] py-6 md:p-[105px] flex flex-col-reverse justify-between md:flex-row md:justify-around items-center md:px-[65px] bg-[#003634] md:bg-transparent">
+          <section className="w-[100%] pt-[14em] pb-[6em] md:p-[105px] flex flex-col-reverse justify-between md:flex-row md:justify-around items-center md:px-[65px] bg-[#003634] md:bg-transparent">
             <div className="w-[80%] md:w-[700px] md:mt-8">
               <h1 className="text-[3em] md:text-[2.9em] font-[600] font-nunito text-white">
                 Reimagining African healthcare
