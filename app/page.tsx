@@ -96,7 +96,7 @@ export default function Home() {
               className="w-[80%] lg:w-[570px]"
             />
           </section>
-          <section className="flex justify-center items-center bg-white p-7 mt-10">
+          <section className="flex justify-center flex-col md:flex-row items-center bg-white p-7 mt-10">
             <div className="p-6">
               <p className="text-[2em] mb-[3rem] font-bold font-nunito text-[#003634] mt-[-100px]">
                 Areas Of Expertise
@@ -206,7 +206,7 @@ export default function Home() {
             Our Case Studies
           </h1>
 
-          <div className="flex items-center justify-center w-[80%]">
+          <div className="flex items-center justify-center w-[80%] flex-col md:flex-row">
             <div className="p-[20px] rounded-xl bg-[#a3d9d7] min-w-[50%] hover:bg-[#47b3ae] pointer ease-in-out duration-500 mr-5 ">
               <Image
                 src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62e8dc318aa3c2502a9a6565_Case%20Study%2014-p-800.jpg"
@@ -331,7 +331,7 @@ export default function Home() {
             Featured Insights
           </div>
 
-          <div className="flex justify-between items-center p-[50px]">
+          <div className="flex flex-col md:flex-row justify-between items-center p-[50px]">
             {blogContainer.map((blog, i) => (
               <Blog
                 text={blog.text}
@@ -352,7 +352,7 @@ export default function Home() {
         </section>
 
         <section className="mt-7 grid place-content-center w-70%">
-          <div className="bg-[url('https://global-uploads.webflow.com/628cd1f0013870d234838177/62bc197783fd9c58e0ea34fc_banner-bg-dark-green.svg')] w-[1200px] font-nunito font-normal text-[#fff] flex justify-between items-center rounded-lg py-[6.25rem] px-[4em]">
+          <div className="bg-[url('https://global-uploads.webflow.com/628cd1f0013870d234838177/62bc197783fd9c58e0ea34fc_banner-bg-dark-green.svg')] w-[1200px] font-nunito font-normal text-[#fff] flex flex-col md:flex-row justify-between items-center rounded-lg py-[6.25rem] px-[4em]">
             <div>
               <h1 className="text-[2em] font-[700] leading-[120%]">
                 Have A Question?
