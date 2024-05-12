@@ -20,7 +20,7 @@ export const Blog = ({
 }) => {
   return (
     <section className="">
-      <div className="w-[400px] relative shadow-xl rounded-xl md:mr-[10px]">
+      <div className="rounded-md flex flex-col items-stretch relative overflow-hidden shadow-md]">
         <Image
           src={image}
           alt={`pics-${title}`}

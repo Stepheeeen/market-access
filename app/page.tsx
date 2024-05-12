@@ -45,56 +45,65 @@ export default function Home() {
   ];
 
   return (
-    <div className="grid w-[100%] place-items-center relative">
-      <main className="grid w-[100%] xl:w-[1440px] m-0 p-0 box-border">
+    <div className="block w-full m-0 p-0 relative box-border min-h-[100%]">
+      <main className="w-full xl:w-[1440px]">
         <NavBar />
 
-        <section className="md:bg-[#003634] w-[100%] grid place-items-center md:px-10 md:h-[1330px]">
-          <section className="w-[100%] pt-[14em] pb-[6em] md:p-[105px] flex flex-col-reverse justify-between md:flex-row md:justify-around items-center md:px-[65px] bg-[#003634] md:bg-transparent">
-            <div className="w-[80%] md:w-[700px] md:mt-8">
-              <h1 className="text-[3em] md:text-[2.9em] font-[600] font-nunito text-white">
-                Reimagining African healthcare
-              </h1>
+        <section className="md:bg-[#003634] md:px-10 md:h-[1330px]">
+          <section className="w-full bg-[#003634] md:bg-transparent pt-[8em] pb-[5em] md:py-[8.125em]">
+            <div className="w-[100%] px-[1em] md:px-[2em] md:max-w-[1200px] md:mx-auto">
+              <div className="flex justify-between items-center flex-row">
+                <div className="max-w-[40%]">
+                  <h1 className="text-[2.8125em] leading-[100%] font-[600] font-nunito text-white">
+                    Reimagining African healthcare
+                  </h1>
 
-              <p className="leading-[125%] text-[16px] font-nunito font-medium w-[80%] text-white mt-9 flex-nowrap">
-                Market Access Africa is a mission-driven healthcare organization
-                that works with the public, private and third-sector to design
-                and deliver transformational healthcare solutions for Africa.
-                <br />
-                <br />
-                We envision an Africa where world-class healthcare is the
-                standard, and where deep-rooted inequities in access to
-                lifesaving technologies and services are a thing of the past. To
-                solve complex problems on the ground, we curate and advance
-                bold, new ideas to accelerate access to the best innovations and
-                appropriate solutions for Africa’s health systems and markets.
-              </p>
+                  <p className="leading-[125%] text-[16px] font-nunito font-medium w-[80%] text-white mt-9 flex-nowrap">
+                    Market Access Africa is a mission-driven healthcare
+                    organization that works with the public, private and
+                    third-sector to design and deliver transformational
+                    healthcare solutions for Africa.
+                    <br />
+                    <br />
+                    We envision an Africa where world-class healthcare is the
+                    standard, and where deep-rooted inequities in access to
+                    lifesaving technologies and services are a thing of the
+                    past. To solve complex problems on the ground, we curate and
+                    advance bold, new ideas to accelerate access to the best
+                    innovations and appropriate solutions for Africa’s health
+                    systems and markets.
+                  </p>
 
-              <button className="font-semibold flex justify-around items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9">
-                More about us
-                <span className="ml-[10px]">
-                  <svg
-                    width="18"
-                    height="17"
-                    viewBox="0 0 18 17"
-                    fill="none "
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M9.02166 0.483154L7.57049 1.89315L13.3134 7.48315H0.788086V9.48315H13.3134L7.57049 15.0732L9.02166 16.4832L17.2552 8.48315L9.02166 0.483154Z"
-                      fill="currentColor "
-                    ></path>
-                  </svg>
-                </span>
-              </button>
+                  <button className="font-semibold flex justify-around items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9">
+                    More about us
+                    <span className="ml-[10px]">
+                      <svg
+                        width="18"
+                        height="17"
+                        viewBox="0 0 18 17"
+                        fill="none "
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.02166 0.483154L7.57049 1.89315L13.3134 7.48315H0.788086V9.48315H13.3134L7.57049 15.0732L9.02166 16.4832L17.2552 8.48315L9.02166 0.483154Z"
+                          fill="currentColor "
+                        ></path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div className="max-w-[37.5em] flex-1">
+                  <Image
+                    src="https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb74791c29173cebdcedff_home-hero.png"
+                    alt="Description of the image"
+                    width={0}
+                    height={0}
+                    className="w-[100%] h-[100%] object-contain"
+                  />
+                </div>
+              </div>
             </div>
-            <Image
-              src="https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb74791c29173cebdcedff_home-hero-p-800.png"
-              alt="Description of the image"
-              width={570}
-              height={700}
-              className="w-[80%] lg:w-[570px]"
-            />
           </section>
           <section className="flex justify-center flex-col md:flex-row items-center bg-white p-7 mt-10">
             <div className="p-6">
@@ -331,7 +340,7 @@ export default function Home() {
             Featured Insights
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center p-[50px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[1.25em] gap-y-[16px]">
             {blogContainer.map((blog, i) => (
               <Blog
                 text={blog.text}
@@ -351,18 +360,18 @@ export default function Home() {
           </button>
         </section>
 
-        <section className="mt-7 grid place-content-center w-70%">
-          <div className="bg-[url('https://global-uploads.webflow.com/628cd1f0013870d234838177/62bc197783fd9c58e0ea34fc_banner-bg-dark-green.svg')] w-[1200px] font-nunito font-normal text-[#fff] flex flex-col md:flex-row justify-between items-center rounded-lg py-[6.25rem] px-[4em]">
-            <div>
-              <h1 className="text-[2em] font-[700] leading-[120%]">
+        <section className="mt-7 flex justify-center items-center w-full">
+          <div className="w-[95%] bg-[url('https://global-uploads.webflow.com/628cd1f0013870d234838177/62bc197783fd9c58e0ea34fc_banner-bg-dark-green.svg')] text-white bg-cover bg-center bg-no-repeat rounded-md flex justify-between items-center mt-16 mb-16 md:flex-row flex-col p-[4em]">
+            <div className="text-center md:text-start">
+              <h1 className="block text-1.5em font-bold my-[0.83em] font-nunito">
                 Have A Question?
               </h1>
-              <p className="text-[1.125em] font-[400]">
+              <p className="block my-4 font-nunito">
                 Please fill out our form or email us.
               </p>
             </div>
 
-            <button className="font-semibold flex justify-around items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl">
+            <button className="font-semibold flex justify-center items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl w-full md:w-auto mt-[1em] md:mt-0">
               Contact Us
               <span className="ml-[10px]">
                 <svg
