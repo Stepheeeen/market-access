@@ -4,6 +4,7 @@ import { Footer } from "./Component/Footer";
 import { Team } from "./Component/Team";
 import { NavBar } from "./Component/NavBar";
 import { Blog } from "./Component/Blog";
+import HeroImg from "../public/hero-img.png";
 
 export default function Home() {
   const blogContainer = [
@@ -51,57 +52,55 @@ export default function Home() {
 
         <section className="md:bg-[#003634] md:px-10 md:h-[1330px]">
           <section className="w-full bg-[#003634] md:bg-transparent pt-[8em] pb-[5em] md:py-[8.125em]">
-            <div className="w-[100%] px-[1em] md:px-[2em] md:max-w-[1200px] md:mx-auto">
-              <div className="flex justify-between items-center flex-row">
-                <div className="max-w-[40%]">
-                  <h1 className="text-[2.8125em] leading-[100%] font-[600] font-nunito text-white">
-                    Reimagining African healthcare
-                  </h1>
+            <div className=" flex justify-between items-center flex-col-reverse md:flex-row mx-auto padding-x-2em px-[1em] md:px-[2em] md:max-w-[1200px] ">
+              <div className="w-full h-[50%] lg:max-w-[40%] flex flex-col items-start md:max-w-1/2 md:mr-3em">
+                <h1 className="text-[2.8125em] leading-[100%] font-[600] font-nunito text-white">
+                  Reimagining African healthcare
+                </h1>
 
-                  <p className="leading-[125%] text-[16px] font-nunito font-medium w-[80%] text-white mt-9 flex-nowrap">
-                    Market Access Africa is a mission-driven healthcare
-                    organization that works with the public, private and
-                    third-sector to design and deliver transformational
-                    healthcare solutions for Africa.
-                    <br />
-                    <br />
-                    We envision an Africa where world-class healthcare is the
-                    standard, and where deep-rooted inequities in access to
-                    lifesaving technologies and services are a thing of the
-                    past. To solve complex problems on the ground, we curate and
-                    advance bold, new ideas to accelerate access to the best
-                    innovations and appropriate solutions for Africa’s health
-                    systems and markets.
-                  </p>
+                <p className="leading-[125%] text-[1.2em] font-nunito font-medium w-full text-white mt-9 flex-nowrap">
+                  Market Access Africa is a mission-driven healthcare
+                  organization that works with the public, private and
+                  third-sector to design and deliver transformational healthcare
+                  solutions for Africa.
+                  <br />
+                  <br />
+                  We envision an Africa where world-class healthcare is the
+                  standard, and where deep-rooted inequities in access to
+                  lifesaving technologies and services are a thing of the past.
+                  To solve complex problems on the ground, we curate and advance
+                  bold, new ideas to accelerate access to the best innovations
+                  and appropriate solutions for Africa’s health systems and
+                  markets.
+                </p>
 
-                  <button className="font-semibold flex justify-around items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9">
-                    More about us
-                    <span className="ml-[10px]">
-                      <svg
-                        width="18"
-                        height="17"
-                        viewBox="0 0 18 17"
-                        fill="none "
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.02166 0.483154L7.57049 1.89315L13.3134 7.48315H0.788086V9.48315H13.3134L7.57049 15.0732L9.02166 16.4832L17.2552 8.48315L9.02166 0.483154Z"
-                          fill="currentColor "
-                        ></path>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
+                <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 w-full md:w-auto">
+                  More about us
+                  <span className="ml-[10px]">
+                    <svg
+                      width="18"
+                      height="17"
+                      viewBox="0 0 18 17"
+                      fill="none "
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.02166 0.483154L7.57049 1.89315L13.3134 7.48315H0.788086V9.48315H13.3134L7.57049 15.0732L9.02166 16.4832L17.2552 8.48315L9.02166 0.483154Z"
+                        fill="currentColor "
+                      ></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
 
-                <div className="max-w-[37.5em] flex-1">
-                  <Image
-                    src="https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb74791c29173cebdcedff_home-hero.png"
-                    alt="Description of the image"
-                    width={0}
-                    height={0}
-                    className="w-[100%] h-[100%] object-contain"
-                  />
-                </div>
+              <div className="max-w-[37.5em] flex-1 md:max-w-30">
+                <Image
+                  src={HeroImg}
+                  alt="Description of the image"
+                  width={0}
+                  height={0}
+                  className="max-w-[100%] w-[100%] h-[100%] object-contain inline-block"
+                />
               </div>
             </div>
           </section>
@@ -127,8 +126,8 @@ export default function Home() {
                 Read More
               </button>
             </div>
-            <div className="p-5">
-              <div className="mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6.25rem md:gap-y-2em">
+              <div className="col-span-1">
                 <Image
                   src="https://global-uploads.webflow.com/628cd1f0013870d234838177/62cbffeb61280938e7e52939_tiles-3.svg"
                   alt="Description of the image"
@@ -148,7 +147,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="mt-8">
+              <div className="col-span-1">
                 <Image
                   src="https://global-uploads.webflow.com/628cd1f0013870d234838177/62cbffebb01eb44a33a4cfbd_tiles-1.svg"
                   alt="Description of the image"
@@ -167,9 +166,8 @@ export default function Home() {
                   influence change.
                 </p>
               </div>
-            </div>
-            <div className="p-5">
-              <div className="mt-8">
+
+              <div className="col-span-1">
                 <Image
                   src="https://global-uploads.webflow.com/628cd1f0013870d234838177/62cbffeb87e915cf1d84662c_tiles-2.svg"
                   alt="Description of the image"
@@ -187,7 +185,7 @@ export default function Home() {
                   results.
                 </p>
               </div>
-              <div className="mt-8">
+              <div className="col-span-1">
                 <Image
                   src="https://global-uploads.webflow.com/628cd1f0013870d234838177/62cbffeb6cdaebe6eac97cfc_tiles.svg"
                   alt="Description of the image"
@@ -215,8 +213,8 @@ export default function Home() {
             Our Case Studies
           </h1>
 
-          <div className="flex items-center justify-center w-[80%] flex-col md:flex-row">
-            <div className="p-[20px] rounded-xl bg-[#a3d9d7] min-w-[50%] hover:bg-[#47b3ae] pointer ease-in-out duration-500 mr-5 ">
+          <div className="w-[98%] grid-cols-1 md:grid-cols-[1fr,1fr] grid-rows-auto gap-x-4 gap-y-4 md:gap-x-[16px] md:gap-y-[16px] flex flex-row mt-12">
+            <div className="p-[20px] rounded-xl bg-[#a3d9d7] min-w-[50%] hover:bg-[#47b3ae] pointer ease-in-out duration-500 self-stretch">
               <Image
                 src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62e8dc318aa3c2502a9a6565_Case%20Study%2014-p-800.jpg"
                 alt="Description of the image"
@@ -239,7 +237,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="">
+            <div className="md:flex-col md:items-center md:justify-between md:h-full md:mb-4 md:p-4 md:bg-[#a3d9d7] md:text-[#003634] md:rounded-lg transition duration-400">
               <div className="p-[20px] rounded-xl bg-[#a3d9d7] hover:bg-[#47b3ae] pointer ease-in-out duration-500 flex">
                 <div>
                   <Image
