@@ -373,7 +373,7 @@ export default function Home() {
               </p>
             </div>
 
-            <button className="font-semibold flex justify-center items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl w-full md:w-auto mt-[1em] md:mt-0">
+            <button className="font-semibold flex justify-center items-center text-[16px] md:text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl w-full md:w-auto mt-[1em] md:mt-0">
               Contact Us
               <span className="ml-[10px]">
                 <svg

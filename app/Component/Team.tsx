@@ -16,19 +16,19 @@ export const Team = () => {
         African healthcare.
       </p>
 
-      <div className="grid px-[80px] lg:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-x-[1.25em] md:gap-y-[16px] w-full p-auto m-auto">
+      <div className="grid px-[50px] lg:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-x-[1.25em] md:gap-y-[16px] w-full p-auto m-auto">
         <div>
           <Image
             src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f0a34f18243edb04f9d_Olawale%20Ajose.png"
             alt="image Description"
             width={250}
             height={300}
-            className="rounded-2xl"
+            className="w-[500px] rounded-2xl"
           />
-          <p className="font-nunito text-[#fff] text-[1.4em] font-medium pt-2">
+          <p className="font-nunito text-[#fff] text-[1em] md:text-[1.4em] font-medium pt-2">
             Olawale Ajose
           </p>
-          <span className="font-nunito text-[#00a99d] text-[1.2em] font-medium">
+          <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
             Managing Partner
           </span>
         </div>
@@ -39,12 +39,12 @@ export const Team = () => {
             alt="image Description"
             width={250}
             height={300}
-            className="rounded-2xl"
+            className="w-[500px] rounded-2xl"
           />
-          <p className="font-nunito text-[#fff] text-[1.4em] pt-2">
+          <p className="font-nunito text-[#fff] text-[1em] md:text-[1.4em] pt-2">
             Kudzai Makomva
           </p>
-          <span className="font-nunito text-[#00a99d] text-[1.2em] font-medium">
+          <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
             Managing Partner
           </span>
         </div>
@@ -55,13 +55,13 @@ export const Team = () => {
             alt="image Description"
             width={250}
             height={300}
-            className="rounded-2xl"
+            className="w-[500px] rounded-2xl"
           />
-          <p className="font-nunito text-[#fff] text-[1.4em] pt-2">
+          <p className="font-nunito text-[#fff] text-[1em] md:text-[1.4em] pt-2">
             {" "}
             Shabnam Zavahir
           </p>
-          <span className="font-nunito text-[#00a99d] text-[1.2em] font-medium">
+          <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
             Partner
           </span>
         </div>
@@ -72,12 +72,12 @@ export const Team = () => {
             alt="image Description"
             width={250}
             height={300}
-            className="rounded-2xl"
+            className="w-[500px] rounded-2xl"
           />
-          <p className="font-nunito text-[#fff] text-[1.4em] pt-2">
+          <p className="font-nunito text-[#fff] text-[1em] md:text-[1.4em] pt-2">
             Spring Gombe
           </p>
-          <span className="font-nunito text-[#00a99d] text-[1.2em] font-medium">
+          <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
             Partner
           </span>
         </div>
