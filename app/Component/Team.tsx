@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export const Team = () => {
   return (
-    <section className="w-[100%] bg-[#003634] p-14 px-[100px] mt-[60px]">
-      <h1 className="text-[#00a99d] text-[2.5em] font-[700] font-nunito">
+    <section className="w-[100%] bg-[#003634] p-[10px] m-auto lg:p-14 lg:px-[100px] mt-[60px]">
+      <h1 className="text-[#00a99d] text-[2.5em] font-[700] font-nunito text-center lg:text-start">
         Meet Our People
       </h1>
 
-      <p className=" text-white w-[80%] text-[17px] font-nunito font-medium py-11">
+      <p className="ml-5 md:ml-0 text-white w-[90%] md:w-full md:px-8 lg:px-0 text-start md:text-center lg:text-start lg:w-[80%] text-[17px] font-nunito font-medium py-11">
         Our team of seasoned experts combine experience at leading healthcare
         organizations, and lived experience across the African continent. This
         drives the way in which we shape innovation and drive change through
@@ -16,7 +16,7 @@ export const Team = () => {
         African healthcare.
       </p>
 
-      <div className="flex-col md:flex-row flex w-[100%] items-center justify-between">
+      <div className="grid px-[80px] lg:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-x-[1.25em] md:gap-y-[16px] w-full p-auto m-auto">
         <div>
           <Image
             src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f0a34f18243edb04f9d_Olawale%20Ajose.png"
@@ -83,8 +83,8 @@ export const Team = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
-        <button className="font-semibold flex justify-around items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl mt-9">
+      <div className="flex justify-center flex-col items-center md:flex-row pl-2 md:pl-0 md:pb-10">
+        <button className="font-semibold flex justify-center items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto">
           Join Our Team
           <span className="ml-[10px]">
             <svg
@@ -102,7 +102,7 @@ export const Team = () => {
           </span>
         </button>
 
-        <button className="font-semibold flex justify-around items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9">
+        <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto mb-[20px] md:mb-0">
           View Team
         </button>
       </div>

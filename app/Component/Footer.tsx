@@ -5,8 +5,8 @@ export const Footer = () => {
   return (
     <footer className="w-[100%] p-[5em] mx-auto bg-[#003634] mt-14 text-white">
       <div className="flex flex-col md:flex-row justify-between items-center">
-        <div className="flex ">
-          <div className="flex flex-col items-start mr-[5em]">
+        <div className="flex mb-[20px] md:mb-0 w-full md:w-auto">
+          <div className="flex flex-col items-start mr-10 md:mr-[5em]">
             <div className="text-[#a3d9d7] text-[.875em] font-nunito mb-[1em] font-[700]">
               READ MORE
             </div>
@@ -30,7 +30,7 @@ export const Footer = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col items-start mr-[5em]">
+          <div className="flex flex-col items-start mr-10 md:mr-[5em]">
             <div className="text-[#a3d9d7] text-[.875em] font-nunito mb-[1em] font-[700]">
               CAREERS
             </div>
@@ -54,7 +54,7 @@ export const Footer = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col items-start mr-[5em]">
+          <div className="flex flex-col items-start mr-10 md:mr-[5em]">
             <div className="text-[#a3d9d7] text-[.875em] font-nunito mb-[1em] font-[700]">
               LEGAL
             </div>

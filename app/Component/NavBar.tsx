@@ -21,7 +21,7 @@ export const NavBar = () => {
           alt="Description of the image"
           width={0}
           height={0}
-          className="inline lg:hidden w-[6em]"
+          className="inline lg:hidden w-[3em]"
         />
 
         <div className="hidden md:inline">

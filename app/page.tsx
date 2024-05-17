@@ -46,12 +46,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="block w-full m-0 p-0 relative box-border min-h-[100%]">
+    <div className="block m-auto w-full p-0 relative box-border min-h-[100%]">
       <main className="w-full xl:w-[1440px]">
         <NavBar />
 
         <section className="md:bg-[#003634] md:px-10 md:h-[1330px]">
-          <section className="w-full bg-[#003634] md:bg-transparent pt-[8em] pb-[5em] md:py-[8.125em]">
+          <section className="w-full bg-[#003634] md:bg-transparent pt-[3em] pb-[5em] md:py-[8.125em]">
             <div className=" flex justify-between items-center flex-col-reverse md:flex-row mx-auto padding-x-2em px-[1em] md:px-[2em] md:max-w-[1200px] ">
               <div className="w-full h-[50%] lg:max-w-[40%] flex flex-col items-start md:max-w-1/2 md:mr-3em">
                 <h1 className="text-[2.8125em] leading-[100%] font-[600] font-nunito text-white">
@@ -99,18 +99,18 @@ export default function Home() {
                   alt="Description of the image"
                   width={0}
                   height={0}
-                  className="max-w-[100%] w-[100%] h-[100%] object-contain inline-block"
+                  className="min-w-[100%] w-[100%] h-[100%] object-contain inline-block mb-[30px] md:mb-0"
                 />
               </div>
             </div>
           </section>
           <section className="flex justify-center flex-col md:flex-row items-center bg-white p-7 mt-10">
-            <div className="p-6">
-              <p className="text-[2em] mb-[3rem] font-bold font-nunito text-[#003634] mt-[-100px]">
+            <div className="pt-10 md:pt-3 md:p-6">
+              <p className="text-[2em] mb-[3rem] font-bold font-nunito text-[#003634] mt-[-100px] md:mt-4">
                 Areas Of Expertise
               </p>
 
-              <p className="font-nunito font-normal text-[#003634] text-[16px]">
+              <p className="font-nunito font-normal text-[#003634] text-[16px] mb-3 md:mb-0">
                 We deliver extensive knowledge and expertise on health systems
                 and markets to help our partners solve complex challenges across
                 the African continent. <br />
@@ -122,7 +122,7 @@ export default function Home() {
                 dynamism of the different African countries where we work.
               </p>
 
-              <button className="font-semibold flex justify-around items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9">
+              <button className="font-semibold md:flex justify-around items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 hidden ">
                 Read More
               </button>
             </div>
@@ -204,16 +204,20 @@ export default function Home() {
                 </p>
               </div>
             </div>
+
+            <button className="font-semibold flex justify-around items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 md:hidden w-full">
+              Read More
+            </button>
           </section>
-          <hr className="border-[#00a99d] w-[87%] border mb-[50px] block mx-auto mt-[60px]" />
+          <hr className="border-[#00a99d] w-[87%] border md:mb-[50px] block mx-auto mt-[60px]" />
         </section>
-        <div className="h-[200px] w-[100%]"></div>
-        <section className="grid place-items-center w-[100%] mt-[100px]">
+        <div className="md:h-[200px] w-[100%]"></div>
+        <section className="grid place-items-center w-[100%] md:mt-[200px] xl:mt-[-5px] mt-10">
           <h1 className="mb-[40px] text-[32px] font-nunito font-bold text-[#003634]">
             Our Case Studies
           </h1>
 
-          <div className="w-[98%] grid-cols-1 md:grid-cols-[1fr,1fr] grid-rows-auto gap-x-4 gap-y-4 md:gap-x-[16px] md:gap-y-[16px] flex flex-row mt-12">
+          <div className="w-[98%] grid-cols-1 md:grid-cols-[1fr,1fr] grid-rows-auto gap-x-4 gap-y-4 md:gap-x-[16px] md:gap-y-[16px] flex flex-col lg:flex-row mt-12">
             <div className="p-[20px] rounded-xl bg-[#a3d9d7] min-w-[50%] hover:bg-[#47b3ae] pointer ease-in-out duration-500 self-stretch">
               <Image
                 src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62e8dc318aa3c2502a9a6565_Case%20Study%2014-p-800.jpg"
@@ -237,19 +241,19 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="md:flex-col md:items-center md:justify-between md:h-full md:mb-4 md:p-4 md:bg-[#a3d9d7] md:text-[#003634] md:rounded-lg transition duration-400">
-              <div className="p-[20px] rounded-xl bg-[#a3d9d7] hover:bg-[#47b3ae] pointer ease-in-out duration-500 flex">
+            <div className="md:flex-col md:items-center md:justify-between md:h-full md:mb-4 md:p-4 md:bg-transparent xl:bg-[#a3d9d7] md:text-[#003634] md:rounded-lg transition duration-400">
+              <div className="p-[20px] rounded-xl bg-[#a3d9d7] hover:bg-[#47b3ae] pointer ease-in-out duration-500 flex flex-col md:flex-row lg:flex-col xl:flex-row">
                 <div>
                   <Image
                     src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62e8d960ae45603ce7359ee0_Case%20Study%203%20In%20Copy-p-500.jpg"
                     alt="image Description"
                     width={275}
                     height={200}
-                    className="w-[275px] h-[150px] rounded-2xl"
+                    className="w-full md:w-[275px] md:h-[150px] lg:w-full xl:w-[275px] xl:h-[150px] rounded-2xl"
                   />
                 </div>
 
-                <div className="w-[75%] pl-4">
+                <div className="w-full md:w-[75%] lg:w-full xl:w-[75%] pl-4 mt-5 md:mt-0 lg:mt-5 xl:mt-0">
                   <span className="text-white rounded-2xl bg-[#003634] text-[14px] py-2 px-3 mr-2 pt-2">
                     Product Commercialization
                   </span>
@@ -266,18 +270,18 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="p-[15px] rounded-xl bg-[#a3d9d7] hover:bg-[#47b3ae] pointer ease-in-out duration-500 mt-3 flex">
+              <div className="p-[15px] rounded-xl bg-[#a3d9d7] hover:bg-[#47b3ae] pointer ease-in-out duration-500 mt-3 flex flex-col md:flex-row lg:flex-col xl:flex-row ">
                 <div>
                   <Image
                     src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62e8d91afaa16635d15d58a1_Case%20Study%202-p-500.jpg"
                     alt="image Description"
                     width={275}
                     height={200}
-                    className="w-[275px] h-[150px] rounded-2xl"
+                    className="w-full md:w-[275px] md:h-[150px] lg:w-full xl:w-[275px] xl:h-[150px] rounded-2xl"
                   />
                 </div>
 
-                <div className="w-[75%] pl-4">
+                <div className="w-full md:w-[75%] lg:w-full xl:w-[75%] pl-4 mt-5 md:mt-0 lg:mt-5 xl:mt-0">
                   <span className="text-white rounded-2xl bg-[#003634] text-[14px] py-2 px-3 mr-2 pt-2">
                     Health System Enablers
                   </span>
@@ -296,7 +300,7 @@ export default function Home() {
             </div>
           </div>
 
-          <button className="font-semibold flex justify-around items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out bg-[#f2b630] py-3 px-9 rounded-xl mt-9">
+          <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out bg-[#f2b630] py-3 px-9 rounded-xl mt-9 w-[90%] md:w-auto">
             Read More
           </button>
         </section>
@@ -313,7 +317,7 @@ export default function Home() {
             health tools and service delivery models.
           </p>
 
-          <button className="font-semibold flex justify-around items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9">
+          <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto">
             View Our Services
             <span className="ml-[10px]">
               <svg
@@ -338,7 +342,7 @@ export default function Home() {
             Featured Insights
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[1.25em] gap-y-[16px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[1.25em] gap-y-[16px]">
             {blogContainer.map((blog, i) => (
               <Blog
                 text={blog.text}
