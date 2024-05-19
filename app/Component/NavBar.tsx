@@ -5,7 +5,7 @@ import Link from "next/link";
 export const NavBar = () => {
   return (
     <div className="block">
-      <nav className="flex justify-between items-center w-full max-w-1200px mx-auto px-[2em] lg:px-2 py-[1.5em]">
+      <nav className="flex justify-between items-center w-full max-w-1200px mx-auto px-[2em] py-[1.5em]">
         {/* Display this image on large screens (above 990px) */}
         <Image
           src="https://global-uploads.webflow.com/628cd1f0013870d234838177/62961eb456ef602bf8751d0c_maa-full-logo.svg"

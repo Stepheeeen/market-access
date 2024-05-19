@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <div className="block m-auto w-full p-0 relative box-border min-h-[100%]">
-      <main className="w-full xl:w-[1440px]">
+      <main className="w-full xl:max-w-[1440px]">
         <NavBar />
 
         <section className="md:bg-[#003634] md:px-10 md:h-[1330px]">
@@ -217,7 +217,7 @@ export default function Home() {
             Our Case Studies
           </h1>
 
-          <div className="w-[98%] grid-cols-1 md:grid-cols-[1fr,1fr] grid-rows-auto gap-x-4 gap-y-4 md:gap-x-[16px] md:gap-y-[16px] flex flex-col lg:flex-row mt-12">
+          <div className="w-[98%] lg:w-[82%] grid-cols-1 md:grid-cols-[1fr,1fr] grid-rows-auto gap-x-4 gap-y-4 md:gap-x-[16px] md:gap-y-[16px] flex flex-col lg:flex-row mt-12">
             <div className="p-[20px] rounded-xl bg-[#a3d9d7] min-w-[50%] hover:bg-[#47b3ae] pointer ease-in-out duration-500 self-stretch">
               <Image
                 src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62e8dc318aa3c2502a9a6565_Case%20Study%2014-p-800.jpg"
@@ -241,8 +241,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="md:flex-col md:items-center md:justify-between md:h-full md:mb-4 md:p-4 md:bg-transparent xl:bg-[#a3d9d7] md:text-[#003634] md:rounded-lg transition duration-400">
-              <div className="p-[20px] rounded-xl bg-[#a3d9d7] hover:bg-[#47b3ae] pointer ease-in-out duration-500 flex flex-col md:flex-row lg:flex-col xl:flex-row">
+            <div className="md:flex-col md:items-center md:justify-between md:h-full md:mb-4 md:bg-transparent md:text-[#003634] md:rounded-lg transition duration-400 lg:ml-[10px]">
+              <div className="p-[25px] rounded-xl bg-[#a3d9d7] hover:bg-[#47b3ae] pointer ease-in-out duration-500 flex flex-col md:flex-row lg:flex-col xl:flex-row">
                 <div>
                   <Image
                     src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62e8d960ae45603ce7359ee0_Case%20Study%203%20In%20Copy-p-500.jpg"
@@ -270,7 +270,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="p-[15px] rounded-xl bg-[#a3d9d7] hover:bg-[#47b3ae] pointer ease-in-out duration-500 mt-3 flex flex-col md:flex-row lg:flex-col xl:flex-row ">
+              <div className="p-[25px] rounded-xl bg-[#a3d9d7] hover:bg-[#47b3ae] pointer ease-in-out duration-500 mt-3 flex flex-col md:flex-row lg:flex-col xl:flex-row lg:mt-[25px]">
                 <div>
                   <Image
                     src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62e8d91afaa16635d15d58a1_Case%20Study%202-p-500.jpg"
@@ -316,6 +316,8 @@ export default function Home() {
             complex problems and bring about access to the latest and best
             health tools and service delivery models.
           </p>
+
+          <div className="flex flex-wrap w-full pt-[3em] items-center justify-center pb-[1em] md:pb-[3em]"></div>
 
           <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto">
             View Our Services
