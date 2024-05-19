@@ -5,6 +5,8 @@ import { Team } from "./Component/Team";
 import { NavBar } from "./Component/NavBar";
 import { Blog } from "./Component/Blog";
 import HeroImg from "../public/hero-img.png";
+import { title } from "process";
+import { Partner } from "./Component/Partner";
 
 export default function Home() {
   const blogContainer = [
@@ -42,6 +44,34 @@ export default function Home() {
         "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f1b91d0a2b7bf4efd48_Kudzai%20Makomva.png",
       name: "Kudzai Makomva",
       date: "April 26, 2023",
+    },
+  ];
+
+  const partnerContainer = [
+    {
+      image:
+        "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb781362bac07e3d2f96f5_sema-logo.png",
+      title: "image",
+    },
+    {
+      image:
+        "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb7812728cd962093d2fa8_the-global-fund-logo.png",
+      title: "image",
+    },
+    {
+      image:
+        "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb78129ffe14ec9a498252_institut-pasteur-logo.png",
+      title: "image",
+    },
+    {
+      image:
+        "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb781251692625b7ddf1d5_open-society-foundations-logo.png",
+      title: "image",
+    },
+    {
+      image:
+        "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb7812ae610ffde05db991_find-logo.png",
+      title: "image",
     },
   ];
 
@@ -317,7 +347,11 @@ export default function Home() {
             health tools and service delivery models.
           </p>
 
-          <div className="flex flex-wrap w-full pt-[3em] items-center justify-center pb-[1em] md:pb-[3em]"></div>
+          <div className="flex flex-wrap w-full pt-[3em] items-center justify-center pb-[1em] md:pb-[3em]">
+            {partnerContainer.map((partner, i) => (
+              <Partner image={partner.image} title={partner.title} />
+            ))}
+          </div>
 
           <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto">
             View Our Services
