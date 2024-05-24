@@ -17,30 +17,35 @@ SwiperCore.use([Navigation, Autoplay]);
 export const Team = () => {
   const teamMembers = [
     {
+      id: 1,
       name: "Olawale Ajose",
       position: "Managing Partner",
       image:
         "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f0a34f18243edb04f9d_Olawale%20Ajose.png",
     },
     {
+      id: 2,
       name: "Kudzai Makomva",
       position: "Managing Partner",
       image:
         "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f1b91d0a2b7bf4efd48_Kudzai%20Makomva.png",
     },
     {
+      id: 3,
       name: "Shabnam Zavahir",
       position: "Partner",
       image:
         "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62f619bc5d479bf0c611f193_Shabnam%20Zavahir.png",
     },
     {
+      id: 4,
       name: "Spring Gombe",
       position: "Partner",
       image:
         "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51ee7ab269ba8e4455504_Spring%20Gombe.png",
     },
     {
+      id: 5,
       name: "Spring Gombe",
       position: "Partner",
       image:
@@ -88,8 +93,8 @@ export const Team = () => {
             },
           }}
         >
-          {teamMembers.map((member, k) => (
-            <SwiperSlide key={k}>
+          {teamMembers.map((member) => (
+            <SwiperSlide key={member.id}>
               <div className="p-4">
                 <Image
                   src={member.image}

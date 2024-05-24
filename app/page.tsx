@@ -49,26 +49,31 @@ export default function Home() {
 
   const partnerContainer = [
     {
+      id: 1,
       image:
         "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb781362bac07e3d2f96f5_sema-logo.png",
       title: "image",
     },
     {
+      id: 2,
       image:
         "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb7812728cd962093d2fa8_the-global-fund-logo.png",
       title: "image",
     },
     {
+      id: 3,
       image:
         "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb78129ffe14ec9a498252_institut-pasteur-logo.png",
       title: "image",
     },
     {
+      id: 4,
       image:
         "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb781251692625b7ddf1d5_open-society-foundations-logo.png",
       title: "image",
     },
     {
+      id: 5,
       image:
         "https://global-uploads.webflow.com/628cd1f0013870d234838177/62eb7812ae610ffde05db991_find-logo.png",
       title: "image",
@@ -349,7 +354,7 @@ export default function Home() {
 
           <div className="flex flex-wrap w-full pt-[3em] items-center justify-center pb-[1em] md:pb-[3em]">
             {partnerContainer.map((partner, i) => (
-              <Partner image={partner.image} title={partner.title} />
+              <Partner image={partner.image} title={partner.title} key={i} />
             ))}
           </div>
 
