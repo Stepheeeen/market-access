@@ -40,6 +40,12 @@ export const Team = () => {
       image:
         "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51ee7ab269ba8e4455504_Spring%20Gombe.png",
     },
+    {
+      name: "Spring Gombe",
+      position: "Partner",
+      image:
+        "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51ee7ab269ba8e4455504_Spring%20Gombe.png",
+    },
   ];
 
   return (
