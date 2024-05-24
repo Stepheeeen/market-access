@@ -1,7 +1,47 @@
-import React from "react";
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+// import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import SwiperCore from "swiper";
 import Image from "next/image";
+import { Navigation } from "swiper/modules";
+// import { Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+import { time } from "console";
+
+SwiperCore.use([Navigation, Autoplay]);
 
 export const Team = () => {
+  const teamMembers = [
+    {
+      name: "Olawale Ajose",
+      position: "Managing Partner",
+      image:
+        "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f0a34f18243edb04f9d_Olawale%20Ajose.png",
+    },
+    {
+      name: "Kudzai Makomva",
+      position: "Managing Partner",
+      image:
+        "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f1b91d0a2b7bf4efd48_Kudzai%20Makomva.png",
+    },
+    {
+      name: "Shabnam Zavahir",
+      position: "Partner",
+      image:
+        "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62f619bc5d479bf0c611f193_Shabnam%20Zavahir.png",
+    },
+    {
+      name: "Spring Gombe",
+      position: "Partner",
+      image:
+        "https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51ee7ab269ba8e4455504_Spring%20Gombe.png",
+    },
+  ];
+
   return (
     <section className="w-[100%] bg-[#003634] p-[10px] m-auto lg:p-14 lg:px-[100px] mt-[60px]">
       <h1 className="text-[#00a99d] text-[2.5em] font-[700] font-nunito text-center lg:text-start">
@@ -16,71 +56,52 @@ export const Team = () => {
         African healthcare.
       </p>
 
-      <div className="grid px-[50px] lg:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-x-[1.25em] md:gap-y-[16px] w-full p-auto m-auto">
-        <div>
-          <Image
-            src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f0a34f18243edb04f9d_Olawale%20Ajose.png"
-            alt="image Description"
-            width={250}
-            height={300}
-            className="w-[500px] rounded-2xl"
-          />
-          <p className="font-nunito text-[#fff] text-[1em] md:text-[1.4em] font-medium pt-2">
-            Olawale Ajose
-          </p>
-          <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
-            Managing Partner
-          </span>
-        </div>
-
-        <div>
-          <Image
-            src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51f1b91d0a2b7bf4efd48_Kudzai%20Makomva.png"
-            alt="image Description"
-            width={250}
-            height={300}
-            className="w-[500px] rounded-2xl"
-          />
-          <p className="font-nunito text-[#fff] text-[1em] md:text-[1.4em] pt-2">
-            Kudzai Makomva
-          </p>
-          <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
-            Managing Partner
-          </span>
-        </div>
-
-        <div>
-          <Image
-            src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62f619bc5d479bf0c611f193_Shabnam%20Zavahir.png"
-            alt="image Description"
-            width={250}
-            height={300}
-            className="w-[500px] rounded-2xl"
-          />
-          <p className="font-nunito text-[#fff] text-[1em] md:text-[1.4em] pt-2">
-            {" "}
-            Shabnam Zavahir
-          </p>
-          <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
-            Partner
-          </span>
-        </div>
-
-        <div>
-          <Image
-            src="https://global-uploads.webflow.com/628f3ec4a439cd94e2b14707/62d51ee7ab269ba8e4455504_Spring%20Gombe.png"
-            alt="image Description"
-            width={250}
-            height={300}
-            className="w-[500px] rounded-2xl"
-          />
-          <p className="font-nunito text-[#fff] text-[1em] md:text-[1.4em] pt-2">
-            Spring Gombe
-          </p>
-          <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
-            Partner
-          </span>
-        </div>
+      <div className="max-w-6xl mx-auto my-8">
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }}
+        >
+          {teamMembers.map((member, k) => (
+            <SwiperSlide key={k}>
+              <div className="p-4">
+                <Image
+                  src={member.image}
+                  alt={`${member.name} Image`}
+                  width={250}
+                  height={300}
+                  className="w-full h-auto rounded-t-2xl"
+                />
+                <p className="font-nunito text-white text-[1em] md:text-[1.4em] font-medium pt-2">
+                  {member.name}
+                </p>
+                <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
+                  {member.position}
+                </span>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <div className="flex justify-center flex-col items-center md:flex-row pl-2 md:pl-0 md:pb-10">
