@@ -98,9 +98,9 @@ export const Team = () => {
             },
           }}
         >
-          {teamMembers.map((member) => (
-            <section>
-              <SwiperSlide key={member.id}>
+          {teamMembers.map((member, index: number) => (
+            <section key={index + member.id + index + 1}>
+              <SwiperSlide key={index + member.id}>
                 <div className="p-4 relative w-full">
                   <Image
                     src={member.image}
@@ -132,7 +132,7 @@ export const Team = () => {
               {isModalOpen && (
                 <Modal
                   onClose={closeModal}
-                  key={member.id}
+                  key={index + member.id}
                   header={
                     <h2 className="text-xl font-semibold">{member.name}</h2>
                   }
