@@ -101,15 +101,15 @@ export const Team = () => {
           {teamMembers.map((member, index: number) => (
             <section key={index + member.id + index + 1}>
               <SwiperSlide key={index + member.id}>
-                <div className="p-4 relative w-full">
+                <div className="p-4 relative">
                   <Image
                     src={member.image}
                     alt={`${member.name} Image`}
                     width={250}
                     height={300}
-                    className="w-[250px] h-[270px] rounded-t-2xl bg-white"
+                    className="w-full md:w-[300px] lg:w-[250px] h-[270px] rounded-t-2xl bg-white"
                   />
-                  <div className="flex justify-between items-center w-full">
+                  <div className="flex justify-between items-center md:w-[90%] w-full">
                     <div>
                       <p className="font-nunito text-white text-[1em] md:text-[1.2em] font-medium pt-2">
                         {member.name}
@@ -121,7 +121,7 @@ export const Team = () => {
 
                     <button
                       onClick={openModal}
-                      className="font-semibold flex justify-center items-center float-end text-[25px] md:text-[25px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out bg-[#00a99d] rounded-full md:w-[40px] mt-[1em] md:mt-2"
+                      className="font-semibold flex justify-center items-center float-end text-[25px] md:text-[25px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out bg-[#00a99d] rounded-full w-[40px] md:mt-2"
                     >
                       +
                     </button>
