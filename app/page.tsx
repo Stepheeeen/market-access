@@ -141,7 +141,7 @@ export default function Home() {
           </section>
           <section className="flex justify-center flex-col md:flex-row items-center bg-white p-7 mt-10">
             <div className="pt-10 md:pt-3 md:p-6">
-              <p className="text-[2em] mb-[3rem] font-bold font-nunito text-[#003634] mt-[-100px] md:mt-4">
+              <p className="text-[2em] mb-[3rem] font-bold font-nunito text-[#003634] mt-[-70px] md:mt-4">
                 Areas Of Expertise
               </p>
 
@@ -340,7 +340,7 @@ export default function Home() {
           </button>
         </section>
 
-        <section className="grid place-items-center w-[100%] mt-[100px]">
+        <section className="grid place-items-center w-[100%] mt-[150px]">
           <h1 className="mb-[40px] text-[32px] font-nunito font-bold text-[#003634]">
             Our Partners
           </h1>
@@ -378,8 +378,8 @@ export default function Home() {
         </section>
 
         <Team />
-        <section className="mt-[50px] mb-9">
-          <div className="text-[#003634] text-[2em] font-[700] leading-[120%] text-center font-nunito">
+        <section className="mt-[70px] mb-9">
+          <div className="text-[#003634] text-[2em] font-[700] leading-[120%] text-center font-nunito mb-[50px]">
             Featured Insights
           </div>
 

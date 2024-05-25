@@ -23,13 +23,9 @@ export const NavBar = () => {
         />
 
         {/* Display this image on smaller screens (990px and below) */}
-        <Image
-          src="https://synergygroupcf.com/logo.png"
-          alt="Description of the image"
-          width={0}
-          height={0}
-          className="inline lg:hidden w-[1em]"
-        />
+        <h1 className="inline lg:hidden font-bold font-nunito text-[21px] text-[#00a99d]">
+          Synergy
+        </h1>
 
         <div
           className={`md:flex md:items-center md:w-auto ${
