@@ -107,7 +107,7 @@ export const Team = () => {
                     alt={`${member.name} Image`}
                     width={250}
                     height={300}
-                    className="w-full md:w-[300px] lg:w-[250px] h-[270px] rounded-t-2xl bg-white"
+                    className="w-full lg:w-[250px] h-[270px] rounded-t-2xl bg-white"
                   />
                   <div className="flex justify-between items-center md:w-[90%] w-full">
                     <div>

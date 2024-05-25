@@ -266,7 +266,11 @@ export default function Home() {
                 <span className="text-white rounded-2xl bg-[#003634] text-[14px] py-2 px-3 mr-2 pt-2">
                   Product Commercialization
                 </span>
-                Featured Case Study
+                <br className="inline md:hidden" />
+                <p className="mt-[15px] md:mt-0 ml-2 md:ml-0">
+                  Featured Case Study
+                </p>
+
                 <h2 className="text-[24px] py-[15px]">ARV Compliance Assay</h2>
                 <p className="text-[18px] pb-6">
                   Our go-to-market strategy helped to integrate a simple and
