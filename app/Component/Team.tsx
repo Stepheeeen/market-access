@@ -9,42 +9,52 @@ import SwiperCore from "swiper";
 import Image from "next/image";
 import { Navigation } from "swiper/modules";
 // import { Pagination } from "swiper/modules";
+import Modal from "./Modal";
 import { Autoplay } from "swiper/modules";
+import { useEffect, useState } from "react";
 import { time } from "console";
 
 SwiperCore.use([Navigation, Autoplay]);
 
 export const Team = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => setIsModalOpen(false);
+
   const teamMembers = [
     {
       id: 1,
-      name: "Olawale Ajose",
-      position: "Managing Partner",
-      image: "https://synergygroupcf.com/adjoa-bucknor.png",
-    },
-    {
-      id: 2,
-      name: "Kudzai Makomva",
-      position: "Managing Partner",
-      image: "https://synergygroupcf.com/benjamin-ogundele.png",
-    },
-    {
-      id: 3,
-      name: "Shabnam Zavahir",
-      position: "Partner",
+      name: "Daniel Okpare",
+      position: "Health Professional",
       image: "https://synergygroupcf.com/daniel-okpare.png",
     },
     {
-      id: 4,
-      name: "Spring Gombe",
-      position: "Partner",
+      id: 2,
+      name: "Dr Adjoa Bucknor",
+      position: "Gynecologist",
+      image: "https://synergygroupcf.com/adjoa-bucknor.png",
+    },
+    {
+      id: 3,
+      name: "Najim Pedro",
+      position: "Director of Affairs",
       image: "https://synergygroupcf.com/najim-pedro.png",
     },
     {
-      id: 5,
-      name: "Spring Gombe",
-      position: "Partner",
+      id: 4,
+      name: "Will Jeudy",
+      position: "Enterpreneur",
       image: "https://synergygroupcf.com/will-jeudy.png",
+    },
+    {
+      id: 5,
+      name: "Benjamin Ogundele",
+      position: "Health Professional",
+      image: "https://synergygroupcf.com/benjamin-ogundele.png",
     },
   ];
 
@@ -89,23 +99,47 @@ export const Team = () => {
           }}
         >
           {teamMembers.map((member) => (
-            <SwiperSlide key={member.id}>
-              <div className="p-4">
-                <Image
-                  src={member.image}
-                  alt={`${member.name} Image`}
-                  width={250}
-                  height={300}
-                  className="w-full h-auto rounded-t-2xl"
+            <section>
+              <SwiperSlide key={member.id}>
+                <div className="p-4 relative w-full">
+                  <Image
+                    src={member.image}
+                    alt={`${member.name} Image`}
+                    width={250}
+                    height={300}
+                    className="w-[250px] h-[270px] rounded-t-2xl bg-white"
+                  />
+                  <div className="flex justify-between items-center w-full">
+                    <div>
+                      <p className="font-nunito text-white text-[1em] md:text-[1.2em] font-medium pt-2">
+                        {member.name}
+                      </p>
+                      <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1em] font-medium">
+                        {member.position}
+                      </span>
+                    </div>
+
+                    <button
+                      onClick={openModal}
+                      className="font-semibold flex justify-center items-center float-end text-[25px] md:text-[25px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out bg-[#00a99d] rounded-full md:w-[40px] mt-[1em] md:mt-2"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              {isModalOpen && (
+                <Modal
+                  onClose={closeModal}
+                  key={member.id}
+                  header={
+                    <h2 className="text-xl font-semibold">{member.name}</h2>
+                  }
+                  text={<p className="mt-4">{member.position}</p>}
                 />
-                <p className="font-nunito text-white text-[1em] md:text-[1.4em] font-medium pt-2">
-                  {member.name}
-                </p>
-                <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1.2em] font-medium">
-                  {member.position}
-                </span>
-              </div>
-            </SwiperSlide>
+              )}
+            </section>
           ))}
         </Swiper>
       </div>

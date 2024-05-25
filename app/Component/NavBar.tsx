@@ -39,37 +39,37 @@ export const NavBar = () => {
           <div className="flex flex-col absolute bg-white w-full mt-[50px] left-0 p-4 rounded-lg md:flex-row md:relative md:w-auto md:mt-0 md:items-center">
             <Link
               href="/"
-              className="font-[600] text-[1em] text-[#00a99d] font-nunito mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#00a99d] font-nunito mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
             >
               Home
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
             >
               About
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25m] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
             >
               Team
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
             >
               Services
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
             >
               Careers
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
             >
               Insights
             </Link>
