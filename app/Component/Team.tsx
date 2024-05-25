@@ -40,7 +40,7 @@ export const Team = () => {
     },
     {
       id: 3,
-      name: "Najim Pedro",
+      name: "Najim Pedro, MD",
       position: "Director of Affairs",
       image: "https://synergygroupcf.com/najim-pedro.png",
     },
