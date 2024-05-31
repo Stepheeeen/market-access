@@ -263,13 +263,15 @@ export default function Home() {
               />
 
               <div className="mt-6 font-nunito font-normal text-[#003634]">
-                <span className="text-white rounded-2xl bg-[#003634] text-[14px] py-2 px-3 mr-2 pt-2">
+                <div className="flex flex-col lg:flex-row lg:items-center w-[53%] lg:w-full">
+                <div className="text-white rounded-2xl bg-[#003634] text-[14px] py-2 px-3 mr-2 pt-2 flex items-center justify-center w-auto">
                   Product Commercialization
-                </span>
-                <br className="inline md:hidden" />
-                <p className="mt-[15px] md:mt-0 ml-2 md:ml-0">
+                </div>
+                <p className="mt-[10px] lg:mt-0 ml-2 md:ml-0">
                   Featured Case Study
                 </p>
+                </div>
+
 
                 <h2 className="text-[24px] py-[15px]">ARV Compliance Assay</h2>
                 <p className="text-[18px] pb-6">

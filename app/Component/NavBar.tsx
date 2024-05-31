@@ -19,64 +19,64 @@ export const NavBar = () => {
           alt="Description of the image"
           width={100}
           height={100}
-          className="hidden lg:inline"
+          className="hidden md:inline"
         />
 
         {/* Display this image on smaller screens (990px and below) */}
         <h1 className="inline lg:hidden font-bold font-nunito text-[21px] text-[#00a99d]">
-          Synergy
+          
         </h1>
 
         <div
-          className={`md:flex md:items-center md:w-auto ${
+          className={`lg:flex lg:items-center lg:w-auto ${
             isOpen ? "block" : "hidden"
           } w-full`}
         >
-          <div className="flex flex-col absolute bg-white w-full mt-[50px] left-0 p-4 rounded-lg md:flex-row md:relative md:w-auto md:mt-0 md:items-center">
+          <div className="flex flex-col absolute bg-white w-full mt-[50px] left-0 p-4 rounded-lg lg:flex-row lg:relative lg:w-auto lg:mt-0 lg:items-center">
             <Link
               href="/"
-              className="font-[600] text-[1.25em] text-[#00a99d] font-nunito mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#00a99d] font-nunito mx-[0.5em] px-[0.5em] p-[10px] lg:p-0"
             >
               Home
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] lg:p-0"
             >
               About
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1.25m] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] lg:p-0"
             >
               Team
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] lg:p-0"
             >
               Services
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] lg:p-0"
             >
               Careers
             </Link>
             <Link
               href="/"
-              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] md:p-0"
+              className="font-[600] text-[1.25em] text-[#6e6e6e] font-nunito hover:text-[#00a99d] ease-out mx-[0.5em] px-[0.5em] p-[10px] lg:p-0"
             >
               Insights
             </Link>
-            <button className="text-white capitalize hover:bg-[#a3d9d7] bg-[#005956] rounded-lg justify-start py-2 px-6 text-lg font-semibold md:ml-2">
+            <button className="text-white capitalize hover:bg-[#a3d9d7] bg-[#005956] rounded-lg justify-start py-2 px-6 text-lg font-semibold lg:ml-2">
               Contact Us
             </button>
           </div>
         </div>
 
-        <div className="inline md:hidden text-[30px] cursor-pointer">
-          <button onClick={toggleMenu}>{isOpen ? "x" : "☰"}</button>
+        <div className="inline lg:hidden text-[30px] cursor-pointer">
+          <button onClick={toggleMenu}>{isOpen ? "╳" : "☰"}</button>
         </div>
       </nav>
     </div>
