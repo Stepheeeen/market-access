@@ -246,7 +246,7 @@ export default function Home() {
           </section>
           <hr className="border-[#00a99d] w-[87%] border md:mb-[50px] block mx-auto mt-[60px]" />
         </section>
-        <div className="md:h-[200px] w-[100%]"></div>
+        <div className="md:h-[100px] w-[100%]"></div>
         <section className="grid place-items-center w-[100%] md:mt-[200px] xl:mt-[-5px] mt-10">
           <h1 className="mb-[40px] text-[32px] font-nunito font-bold text-[#003634]">
             Our Case Studies
