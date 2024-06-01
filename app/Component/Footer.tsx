@@ -56,7 +56,7 @@ export const Footer = () => {
 
           <div className="flex flex-col items-start mr-10 md:mr-[5em]">
             <div className="text-[#a3d9d7] text-[.875em] font-nunito mb-[1em] font-[700]">
-              LEGAL
+              LEGAL 
             </div>
             <Link
               href="/"
