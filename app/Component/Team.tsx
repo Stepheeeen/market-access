@@ -3,27 +3,33 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-// import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import SwiperCore from "swiper";
 import Image from "next/image";
 import { Navigation } from "swiper/modules";
-// import { Pagination } from "swiper/modules";
-import Modal from "./Modal";
 import { Autoplay } from "swiper/modules";
-import { useEffect, useState } from "react";
-import { time } from "console";
+import { useState } from "react";
+import { Modal, Box, Typography, Button } from '@mui/material';
+
 
 SwiperCore.use([Navigation, Autoplay]);
 
 export const Team = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    boxShadow: 24,
+    p: 4,
   };
-
-  const closeModal = () => setIsModalOpen(false);
 
   const teamMembers = [
     {
@@ -31,12 +37,14 @@ export const Team = () => {
       name: "Daniel Okpare",
       position: "Health Professional",
       image: "https://synergygroupcf.com/daniel-okpare.png",
+      bio: 'bio'
     },
     {
       id: 2,
       name: "Dr Adjoa Bucknor",
       position: "Gynecologist",
       image: "https://synergygroupcf.com/adjoa-bucknor.png",
+      bio: 'bio'
     },
     {
       id: 3,
@@ -49,12 +57,14 @@ export const Team = () => {
       name: "Will Jeudy",
       position: "Enterpreneur",
       image: "https://synergygroupcf.com/will-jeudy.png",
+      bio: 'bio'
     },
     {
       id: 5,
       name: "Benjamin Ogundele",
       position: "Health Professional",
       image: "https://synergygroupcf.com/benjamin-ogundele.png",
+      bio: 'bio'
     },
   ];
 
@@ -100,42 +110,62 @@ export const Team = () => {
         >
           {teamMembers.map((member, index: number) => (
             <>
-            <section key={index + member.id + index + 1}>
-              <SwiperSlide key={index + member.id}>
-                <div className="p-4 relative">
-                  <Image
-                    src={member.image}
-                    alt={`${member.name} Image`}
-                    width={250}
-                    height={300}
-                    className="w-full lg:w-[300px] h-[300px] rounded-t-2xl "
-                  />
-                  <div className="flex justify-between items-center md:w-[90%] w-full">
-                    <div>
-                      <p className="font-nunito text-white text-[1em] md:text-[1.2em] font-medium pt-2">
-                        {member.name}
-                      </p>
-                      <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1em] font-medium">
-                        {member.position}
-                      </span>
+              <section key={index + member.id + index + 1}>
+                <SwiperSlide key={index + member.id}>
+                  <div className="p-4 relative">
+                    <Image
+                      src={member.image}
+                      alt={`${member.name} Image`}
+                      width={250}
+                      height={300}
+                      className="w-full lg:w-[300px] h-[300px] rounded-t-2xl "
+                    />
+                    <div className="flex justify-between items-center md:w-[90%] w-full">
+                      <div>
+                        <p className="font-nunito text-white text-[1em] md:text-[1.2em] font-medium pt-2">
+                          {member.name}
+                        </p>
+                        <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1em] font-medium">
+                          {member.position}
+                        </span>
+                      </div>
+
+                      <div
+                        onClick={handleOpen}
+                        className="font-semibold cursor-pointer flex justify-center items-center float-end text-[25px] md:text-[25px] text-[#fff] font-nunito hover:bg-[#c0e9e6]/[0.6] ease-out bg-[#00a99d] rounded-full w-[40px] md:mt-2"
+                      >
+                        +
+                      </div>
+                      
                     </div>
-
-                    <button
-                      onClick={openModal}
-                      className="font-semibold flex justify-center items-center float-end text-[25px] md:text-[25px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out bg-[#00a99d] rounded-full w-[40px] md:mt-2"
-                    >
-                      +
-                    </button>
                   </div>
-                </div>
-              </SwiperSlide>
-            </section>
+                </SwiperSlide>
+              </section>
 
-            
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography id="modal-modal-title" variant="h6" component="h2">
+                    {member.name}
+                  </Typography>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    {member.bio}
+                  </Typography>
+                  <div className='flex items-center w-full justify-between mt-5'>
+                    <Button onClick={handleClose} variant="contained" className='px-5 py-2 border-none'>
+                      Cancel
+                    </Button>
+                  </div>
+                </Box>
+              </Modal>
             </>
           ))}
         </Swiper>
-        
+
       </div>
 
       <div className="flex justify-center flex-col items-center md:flex-row pl-2 md:pl-0 md:pb-10">
