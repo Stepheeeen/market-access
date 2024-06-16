@@ -99,6 +99,7 @@ export const Team = () => {
           }}
         >
           {teamMembers.map((member, index: number) => (
+            <>
             <section key={index + member.id + index + 1}>
               <SwiperSlide key={index + member.id}>
                 <div className="p-4 relative">
@@ -128,20 +129,13 @@ export const Team = () => {
                   </div>
                 </div>
               </SwiperSlide>
-
-              {isModalOpen && (
-                <Modal
-                  onClose={closeModal}
-                  key={index + member.id}
-                  header={
-                    <h2 className="text-xl font-semibold">{member.name}</h2>
-                  }
-                  text={<p className="mt-4">{member.position}</p>}
-                />
-              )}
             </section>
+
+            
+            </>
           ))}
         </Swiper>
+        
       </div>
 
       <div className="flex justify-center flex-col items-center md:flex-row pl-2 md:pl-0 md:pb-10">

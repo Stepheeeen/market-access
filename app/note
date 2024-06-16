@@ -1,5 +1,62 @@
+<>
+<div className='flex flex-col text-black'>
+  {teamMembers.map((member, index) => (
+    <section key={index + member.id + index + 1}>
+      <SwiperSlide key={index + member.id}>
+        <div className="p-4 relative">
+          <Image
+            src={member.image}
+            alt={`${member.name} Image`}
+            width={250}
+            height={300}
+            className="w-full lg:w-[300px] h-[300px] rounded-t-2xl"
+          />
+          <div className="flex justify-between items-center md:w-[90%] w-full">
+            <div>
+              <p className="font-nunito text-white text-[1em] md:text-[1.2em] font-medium pt-2">
+                {member.name}
+              </p>
+              <span className="font-nunito text-[#00a99d] text-[.8em] md:text-[1em] font-medium">
+                {member.position}
+              </span>
+            </div>
 
+            <button
+              onClick={() => openModal(member)}
+              className="font-semibold flex justify-center items-center float-end text-[25px] md:text-[25px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out bg-[#00a99d] rounded-full w-[40px] md:mt-2"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </SwiperSlide>
+    </section>
+  ))}
+</div>
 
-
-
-
+{isModalOpen && selectedMember && (
+  <Modal
+    open={isModalOpen}
+    onClose={closeModal}
+    aria-labelledby="modal-modal-title"
+    aria-describedby="modal-modal-description"
+  >
+    <Box sx={style}>
+      <Typography id="modal-modal-title" variant="h6" component="h2">
+        {selectedMember.name}
+      </Typography>
+      <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+        {selectedMember.position}
+      </Typography>
+      <Typography id="modal-modal-bio" sx={{ mt: 2 }}>
+        {selectedMember.bio}
+      </Typography>
+      <div className='flex items-center w-full justify-between mt-5'>
+        <Button onClick={closeModal} variant="contained" className='px-5 py-2 border-none'>
+          Close
+        </Button>
+      </div>
+    </Box>
+  </Modal>
+)}
+</>
