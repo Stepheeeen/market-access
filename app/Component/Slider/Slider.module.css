@@ -1,0 +1,21 @@
+/* Slider.css */
+
+.swiper-button-next, .swiper-button-prev {
+    color: white; /* Change color */
+    background-color: black; /* Change background color */
+    border-radius: 50%; /* Make the buttons circular */
+    width: 40px; /* Set button width */
+    height: 40px; /* Set button height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px; /* Change icon size */
+  }
+  
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: gray; /* Change background color on hover */
+  }
+  
