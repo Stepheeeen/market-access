@@ -32,44 +32,7 @@ export const Team = () => {
     boxShadow: 24,
     p: 4,
   };
-
-  const teamMembers = [
-    {
-      id: 1,
-      name: "Daniel Okpare",
-      position: "Health Professional",
-      image: "https://synergygroupcf.com/daniel-okpare.png",
-      bio: 'bio'
-    },
-    {
-      id: 2,
-      name: "Dr Adjoa Bucknor",
-      position: "Gynecologist",
-      image: "https://synergygroupcf.com/adjoa-bucknor.png",
-      bio: 'bio'
-    },
-    {
-      id: 3,
-      name: "Najim Pedro, MD",
-      position: "Director of Affairs",
-      image: "https://synergygroupcf.com/najim-pedro.png",
-    },
-    {
-      id: 4,
-      name: "Will Jeudy",
-      position: "Enterpreneur",
-      image: "https://synergygroupcf.com/will-jeudy.png",
-      bio: 'bio'
-    },
-    {
-      id: 5,
-      name: "Benjamin Ogundele",
-      position: "Health Professional",
-      image: "https://synergygroupcf.com/benjamin-ogundele.png",
-      bio: 'bio'
-    },
-  ];
-
+  
   return (
     <section className="w-[100%] bg-[#003634] p-[10px] m-auto lg:p-14 lg:px-[100px] mt-[60px]">
       <h1 className="text-[#00a99d] text-[2.5em] font-[700] font-nunito text-center lg:text-start">
