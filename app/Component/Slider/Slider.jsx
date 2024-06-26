@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Image from 'next/image';
-import { height } from '@fortawesome/free-solid-svg-icons/fa0';
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
   bgcolor: 'background.paper',
-  // height: '800px',
   boxShadow: 24,
   p: 4,
 };
@@ -82,21 +77,39 @@ return (
   <div className='w-full'>
     <Swiper
       spaceBetween={-45}
-      slidesPerView={3}  // Number of slides to show
+      slidesPerView={1}  // Number of slides to show
       navigation        // Enable navigation
       pagination={{ clickable: true }} // Enable pagination
+      style={{
+        '--swiper-navigation-color': '#fff',
+        '--swiper-pagination-color': '#fff',
+      }}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          // spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          // spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          // spaceBetween: -45,
+        },
+      }}
     >
       {Slider.map((slides, index) => (
         <SwiperSlide className='p-[50px] w-[400px]' key={index}>
-          <div className='bg-white rounded-lg' >
+          <div className='bg-white rounded-lg'>
             <Image src={slides.ImageSrc} width={400} height={400} className='rounded-lg'/>
           </div>
           <div className='w-full flex justify-between items-center mt-3'>
             <div className='text-white'>
-              <h1>
+              <h1 className='text-[18px]'>
                 {slides.name}
               </h1>
-              <p>
+              <p className='text-[14px]'>
                 {slides.position}
               </p>
             </div>
@@ -111,7 +124,7 @@ return (
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
             >
-              <Box sx={style} className='h-[500px] overflow-y-scroll overflow-x-hidden rounded'>
+              <Box sx={style} className='h-[400px] md:h-[500px] overflow-y-scroll overflow-x-hidden rounded w-[90%] md:w-[400px]'>
                 <h1 className='text-[21px] font-medium'>
                   {slides.name}
                 </h1>
