@@ -7,6 +7,7 @@ import { Blog } from "./Component/Blog";
 import HeroImg from "../public/hero-img.png";
 import { title } from "process";
 import { Partner } from "./Component/Partner";
+import VideoOverlay from "./Component/VideoPlayer";
 
 export default function Home() {
   const blogContainer = [
@@ -109,7 +110,7 @@ export default function Home() {
                   markets.
                 </p>
 
-                <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 w-full md:w-auto">
+                <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 w-full md:w-auto" id='style'>
                   More about us
                   <span className="ml-[10px]">
                     <svg
@@ -364,7 +365,7 @@ export default function Home() {
             ))}
           </div>
 
-          <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto">
+          <button className="font-semibold flex justify-center items-center text-[18px] text-[#003634] font-nunito hover:bg-[#e9d5a9] ease-out mr-[20px] bg-[#f2b630] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto" id='style'>
             View Our Services
             <span className="ml-[10px]">
               <svg
@@ -420,7 +421,7 @@ export default function Home() {
               </p>
             </div>
 
-            <button className="font-semibold flex justify-center items-center text-[16px] md:text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl w-full md:w-auto mt-[1em] md:mt-0">
+            <button className="font-semibold flex justify-center items-center text-[16px] md:text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl w-full md:w-auto mt-[1em] md:mt-0" id='style'>
               Contact Us
               <span className="ml-[10px]">
                 <svg
@@ -439,6 +440,8 @@ export default function Home() {
             </button>
           </div>
         </section>
+
+        <VideoOverlay/>
 
         <Footer />
       </main>

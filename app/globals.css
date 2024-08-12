@@ -11,3 +11,8 @@ body {
 ::-webkit-scrollbar{
   display: none;
 }
+
+#style:hover span {
+  margin-right: -13px;
+  transition: ease-in-out .5s;
+}

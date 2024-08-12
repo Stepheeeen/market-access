@@ -52,7 +52,7 @@ export const Team = () => {
       </div>
 
       <div className="flex justify-center flex-col items-center md:flex-row pl-2 md:pl-0 md:pb-10">
-        <button className="font-semibold flex justify-center items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto">
+        <button className="font-semibold flex justify-center items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto" id='style'>
           Join Our Team
           <span className="ml-[10px]">
             <svg
