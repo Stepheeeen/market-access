@@ -16,3 +16,6 @@ body {
   margin-right: -13px;
   transition: ease-in-out .5s;
 }
+html {
+  scroll-behavior: smooth;
+}

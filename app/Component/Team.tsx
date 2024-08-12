@@ -10,6 +10,8 @@ import { Navigation } from "swiper/modules";
 import { Autoplay } from "swiper/modules";
 import { useState } from "react";
 import ImageSlider from './Slider/Slider'
+import FadeIn from "./Animations/FadeIn";
+import FadeInLeft from "./Animations/FadeInLeft";
 // import { Modal, Box, Typography, Button } from '@mui/material';
 
 
@@ -35,6 +37,7 @@ export const Team = () => {
   
   return (
     <section className="w-[100%] bg-[#003634] p-[10px] m-auto lg:p-14 lg:px-[100px] mt-[60px]">
+      <FadeInLeft>
       <h1 className="text-[#00a99d] text-[2.5em] font-[700] font-nunito text-center lg:text-start">
         Meet Our People
       </h1>
@@ -46,11 +49,14 @@ export const Team = () => {
         challenging the status quo and thinking boldly about a new era in
         African healthcare.
       </p>
+      </FadeInLeft>
+
 
       <div className="max-w-6xl mx-auto my-8">
         <ImageSlider />
       </div>
 
+      <FadeIn>
       <div className="flex justify-center flex-col items-center md:flex-row pl-2 md:pl-0 md:pb-10">
         <button className="font-semibold flex justify-center items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto" id='style'>
           Join Our Team
@@ -74,6 +80,8 @@ export const Team = () => {
           View Team
         </button>
       </div>
+      </FadeIn>
+
     </section>
   );
 };

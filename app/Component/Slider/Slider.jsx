@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Image from 'next/image';
+import FadeInRight from '../Animations/FadeInRight';
 
 const style = {
   position: 'absolute',
@@ -101,6 +102,7 @@ return (
     >
       {Slider.map((slides, index) => (
         <SwiperSlide className='p-[50px] w-[400px]' key={index}>
+          <FadeInRight>
           <div className='bg-white rounded-lg'>
             <Image src={slides.ImageSrc} width={400} height={400} className='rounded-lg'/>
           </div>
@@ -135,6 +137,7 @@ return (
             </Modal>
 
           </div>
+        </FadeInRight>
         </SwiperSlide>
       ))}
     </Swiper>
