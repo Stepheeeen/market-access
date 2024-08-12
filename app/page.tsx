@@ -14,6 +14,7 @@ import FadeInBottomLeft from "./Component/Animations/FadeInBottomLeft";
 import FadeInLeft from "./Component/Animations/FadeInLeft";
 import FadeOut from "./Component/Animations/FadeOut";
 import FadeInBottomRight from "./Component/Animations/FadeInBottomRight";
+import FadeInDelayed from "./Component/Animations/FadeInDelayed";
 
 export default function Home() {
   const blogContainer = [
@@ -405,7 +406,10 @@ export default function Home() {
           </section>
         </FadeInBottomRight>
 
+        <FadeInBottomRight>
         <Team />
+        </FadeInBottomRight>
+
 
         <FadeInBottomLeft>
           <section className="mt-[70px] mb-9">
@@ -433,7 +437,6 @@ export default function Home() {
             </button>
           </section>
         </FadeInBottomLeft>
-
 
         <FadeIn>
           <section className="mt-7 flex justify-center items-center w-full">
@@ -470,8 +473,10 @@ export default function Home() {
 
 
         {/* <VideoOverlay/> */}
-
+        <FadeInLeft>
         <Footer />
+        </FadeInLeft>
+
       </main>
     </div>
   );

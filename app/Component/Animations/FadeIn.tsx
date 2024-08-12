@@ -1,32 +1,41 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import 'animate.css';
 
 const FadeIn: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
-
-  const handleScroll = () => {
-    const section = document.getElementById('fade-in');
-    if (section) {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= window.innerHeight) {
-        setIsVisible(true);
-      }
-    }
-  };
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check visibility on mount
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target); // Stop observing after the element is in view
+        }
+      },
+      { threshold: 0.1 } // Adjust the threshold as needed
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
     };
   }, []);
 
   return (
     <div
-      id="fade-in"
+      ref={elementRef}
       className={`animate__animated ${isVisible ? 'animate__fadeIn' : ''}`}
+      style={{
+        // animationDelay: isVisible ? '1.2s' : '0s',
+        // animationDuration: '2s', // Adjust this value to control the speed
+      }}
     >
       {children}
     </div>

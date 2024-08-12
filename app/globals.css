@@ -19,3 +19,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.fadeInDelayed {
+  animation-delay: 1s;
+}
+.fadeInDelayedExtended{
+  animation-delay: 7s;
+}

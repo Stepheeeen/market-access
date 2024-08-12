@@ -12,6 +12,7 @@ import { useState } from "react";
 import ImageSlider from './Slider/Slider'
 import FadeIn from "./Animations/FadeIn";
 import FadeInLeft from "./Animations/FadeInLeft";
+import FadeInBottomRight from "./Animations/FadeInBottomRight";
 // import { Modal, Box, Typography, Button } from '@mui/material';
 
 
@@ -34,29 +35,31 @@ export const Team = () => {
     boxShadow: 24,
     p: 4,
   };
-  
+
   return (
     <section className="w-[100%] bg-[#003634] p-[10px] m-auto lg:p-14 lg:px-[100px] mt-[60px]">
       <FadeInLeft>
-      <h1 className="text-[#00a99d] text-[2.5em] font-[700] font-nunito text-center lg:text-start">
-        Meet Our People
-      </h1>
+        <h1 className="text-[#00a99d] text-[2.5em] font-[700] font-nunito text-center lg:text-start">
+          Meet Our People
+        </h1>
 
-      <p className="ml-5 md:ml-0 text-white w-[90%] md:w-full md:px-8 lg:px-0 text-start md:text-center lg:text-start lg:w-[80%] text-[17px] font-nunito font-medium py-11">
-        Our team of seasoned experts combine experience at leading healthcare
-        organizations, and lived experience across the African continent. This
-        drives the way in which we shape innovation and drive change through
-        challenging the status quo and thinking boldly about a new era in
-        African healthcare.
-      </p>
+        <p className="ml-5 md:ml-0 text-white w-[90%] md:w-full md:px-8 lg:px-0 text-start md:text-center lg:text-start lg:w-[80%] text-[17px] font-nunito font-medium py-11">
+          Our team of seasoned experts combine experience at leading healthcare
+          organizations, and lived experience across the African continent. This
+          drives the way in which we shape innovation and drive change through
+          challenging the status quo and thinking boldly about a new era in
+          African healthcare.
+        </p>
       </FadeInLeft>
 
 
-      <div className="max-w-6xl mx-auto my-8">
-        <ImageSlider />
-      </div>
+      <FadeInBottomRight>
+        <div className="max-w-6xl mx-auto my-8">
+          <ImageSlider />
+        </div>
+      </FadeInBottomRight>
 
-      <FadeIn>
+
       <div className="flex justify-center flex-col items-center md:flex-row pl-2 md:pl-0 md:pb-10">
         <button className="font-semibold flex justify-center items-center text-[18px] text-[#fff] font-nunito hover:bg-[#c0e9e6] ease-out mr-[20px] bg-[#00a99d] py-3 px-8 rounded-xl mt-9 w-[90%] md:w-auto" id='style'>
           Join Our Team
@@ -80,7 +83,7 @@ export const Team = () => {
           View Team
         </button>
       </div>
-      </FadeIn>
+
 
     </section>
   );
