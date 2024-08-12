@@ -2,12 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 const VideoOverlay = () => {
-  const [showVideo, setShowVideo] = useState(true);
-
-  // Automatically show the video when the component mounts
-  useEffect(() => {
-    setShowVideo(true);
-  }, []);
+  const [showVideo, setShowVideo] = useState(false);
 
   const handleCloseVideo = () => {
     setShowVideo(false);

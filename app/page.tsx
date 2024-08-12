@@ -472,7 +472,7 @@ export default function Home() {
         </FadeIn>
 
 
-        {/* <VideoOverlay/> */}
+        <VideoOverlay/>
         <FadeInLeft>
         <Footer />
         </FadeInLeft>
